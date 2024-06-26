@@ -361,7 +361,7 @@
     "id": "kilt",
     "type": "ARMOR",
     "name": { "str": "kilt" },
-    "description": "No true Scotsman would leave home without his kilt.",
+    "description": "No true Scotsman would leave home without his kilt.  Kilts lack pockets and thus a belt and sporran are necessary accessories.",
     "weight": "500 g",
     "volume": "1500 ml",
     "price": "65 USD",
@@ -369,6 +369,27 @@
     "material": [ "wool" ],
     "symbol": "[",
     "looks_like": "skirt",
+    "color": "brown_yellow",
+    "warmth": 20,
+    "material_thickness": 0.3,
+    "flags": [ "VARSIZE" ],
+    "armor": [
+      { "coverage": 100, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] },
+      { "coverage": 95, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+    ]
+  },
+  {
+    "id": "kilt_utility",
+    "type": "ARMOR",
+    "name": { "str": "utility kilt" },
+    "description": "Common among American nerds and rivetheads, the utility kilt is a durabable canvas kilt with a large front pocket.",
+    "weight": "500 g",
+    "volume": "1500 ml",
+    "price": "35 USD",
+    "price_postapoc": "50 cent",
+    "material": [ "canvas" ],
+    "symbol": "[",
+    "looks_like": "kilt",
     "color": "dark_gray",
     "pocket_data": [
       {
