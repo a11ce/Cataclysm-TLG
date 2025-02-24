@@ -1,3 +1,4 @@
+# this is currently unused because the macports action is broken
 ports:
   - name: freetype
     select: [ universal ]
