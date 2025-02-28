@@ -10,6 +10,12 @@ TLG's primary aim is to preserve Cataclysm's depth and respect for plausibility 
 
 **Source** - The source can also be cloned from the [GitHub repo](https://github.com/Cataclysm-TLG/Cataclysm-TLG/). You probably only want to do this if you're working on the game.
 
+## Links
+
+Website: https://cataclysmtlg.com/
+
+Discord: https://discord.gg/n49PTZyMkB
+
 ## Contributions
 
 Cataclysm: The Last Generation is developed under the Creative Commons Attribution ShareAlike 3.0 license. The code and content of the game are free to use, modify, and redistribute for any purpose whatsoever. See https://creativecommons.org/licenses/by-sa/3.0/ for details.
