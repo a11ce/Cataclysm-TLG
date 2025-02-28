@@ -1695,7 +1695,7 @@
       {
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 65,
-        "encumbrance": 2,
+        "encumbrance": 3,
         "specifically_covers": [ "leg_draped_l", "leg_draped_r" ],
         "layers": [ "BELTED" ]
       }
@@ -1938,7 +1938,7 @@
     "flags": [ "RAINPROOF", "OVERSIZE", "HOOD", "BELTED" ],
     "environmental_protection": 1,
     "material_thickness": 0.1,
-    "armor": [ { "coverage": 90, "covers": [ "torso" ] } ]
+    "armor": [ { "coverage": 90, "covers": [ "torso" ], "encumbrance": 3 } ]
   },
   {
     "id": "folding_poncho",
@@ -1958,11 +1958,11 @@
     "material_thickness": 0.4,
     "variant_type": "generic",
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper", "torso_lower" ], "coverage": 100 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper", "torso_lower" ], "coverage": 100, "encumbrance": 4  },
       {
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_r", "arm_upper_l", "arm_elbow_r", "arm_elbow_l" ],
-        "coverage": 100
+        "coverage": 100, "encumbrance": 4 
       },
       { "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_lower_l", "arm_lower_r" ], "coverage": 90 }
     ]
