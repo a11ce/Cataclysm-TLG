@@ -1085,7 +1085,9 @@
   },
   {
     "type": "effect_type",
-    "id": "mutagen"
+    "id": "mutagen",
+    "flags": [ "MUTAGEN_EFFECT" ],
+    "blood_analysis_description": "Mutagen"
   },
   {
     "type": "effect_type",
