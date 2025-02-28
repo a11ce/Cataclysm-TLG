@@ -2170,6 +2170,7 @@
     "weight": "40 kg",
     "stomach_size": 300,
     "upgrades": { "age_grow": 30, "into": "mon_ant_acid" },
+    "extend": { "flags": [ "ACIDPROOF" ] },
     "special_attacks": [
       {
         "type": "spell",
