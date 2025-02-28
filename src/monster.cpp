@@ -86,6 +86,7 @@ static const efftype_id effect_beartrap( "beartrap" );
 static const efftype_id effect_bleed( "bleed" );
 static const efftype_id effect_blind( "blind" );
 static const efftype_id effect_bouldering( "bouldering" );
+static const efftype_id effect_corroding( "corroding" );
 static const efftype_id effect_cramped_space( "cramped_space" );
 static const efftype_id effect_critter_underfed( "critter_underfed" );
 static const efftype_id effect_critter_well_fed( "critter_well_fed" );
@@ -1782,6 +1783,7 @@ bool monster::is_elec_immune() const
     return is_immune_damage( damage_electric );
 }
 
+
 bool monster::is_immune_effect( const efftype_id &effect ) const
 {
     if( effect == effect_onfire ) {
@@ -1817,6 +1819,10 @@ bool monster::is_immune_effect( const efftype_id &effect ) const
 
     if( effect == effect_stunned ) {
         return has_flag( mon_flag_STUN_IMMUNE );
+    }
+
+    if( effect == effect_corroding ) {
+        return has_flag( mon_flag_ACIDPROOF );
     }
 
     if( effect == effect_downed ) {
