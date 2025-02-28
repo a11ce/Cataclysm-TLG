@@ -10,12 +10,12 @@
     "replace": "grenade_under_mod"
   },
   {
-    "id": [ "masterkey", "rm121aux", "u_shotgun" ],
+    "id": [ "masterkey", "u_shotgun" ],
     "type": "MIGRATION",
     "replace": "shotgun_under"
   },
   {
-    "id": [ "masterkey_mod", "rm121aux_mod", "u_shotgun_mod" ],
+    "id": [ "masterkey_mod", "u_shotgun_mod" ],
     "type": "MIGRATION",
     "replace": "shotgun_under_mod"
   },
