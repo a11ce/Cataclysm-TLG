@@ -4,6 +4,7 @@
     "id": "ANY",
     "name": "Any",
     "threshold_mut": "",
+    "vitamin": "mutagen",
     "mutagen_message": "You feel strange."
   },
   {
