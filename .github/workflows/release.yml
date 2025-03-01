@@ -42,8 +42,8 @@ jobs:
           echo "release_name=Cataclysm-TLG 1.0 ${{ steps.get-timestamp.outputs.time }}" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v4
       - run: |
-          gh release create ${{ steps.generate_env_vars.outputs.tag_name }} --generate-notes --prerelease --title "${{ steps.generate_env_vars.outputs.release_name }}" --target "$(git log -1 --format='%H')"
-
+          gh release create ${{ steps.generate_env_vars.outputs.tag_name }} --generate-notes --prerelease --title "${{ steps.generate_env_vars.outputs.release_name }}" --target "$(git log -1 --format=%H)"
+          
   builds:
     needs: release
     strategy:
@@ -312,10 +312,17 @@ jobs:
         if: runner.os == 'Linux' && matrix.android != 'none' && matrix.mxe == 'none'
         working-directory: ./android
         run: |
-          echo "${{ secrets.KEYSTORE }}" > release.keystore.asc   
-          gpg -d --passphrase "${{ secrets.KEYSTORE_PASSWORD }}" --batch release.keystore.asc > app/release.keystore 
-          echo "${{ secrets.KEYSTORE_PROPERTIES }}" > keystore.properties.asc   
-          gpg -d --passphrase "${{ secrets.KEYSTORE_PASSWORD }}" --batch keystore.properties.asc > keystore.properties
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          echo "${{ secrets.KEYSTORE }}" > release.keystore.asc
+          gpg --batch --yes --pinentry-mode loopback --passphrase-fd 0 --output app/release.keystore --decrypt release.keystore.asc || {
+            echo "Failed to decrypt release.keystore.asc"
+            exit 1
+          }
+          echo "${{ secrets.KEYSTORE_PROPERTIES }}" > keystore.properties.asc
+          gpg --batch --yes --pinentry-mode loopback --passphrase-fd 0 --output keystore.properties --decrypt keystore.properties.asc || {
+            echo "Failed to decrypt keystore.properties.asc"
+            exit 1
+          }
           export UPSTREAM_BUILD_NUMBER="$((11581 + ${{ github.run_number }}))"
           chmod +x gradlew
           if [ ${{ matrix.android }} = arm64 ]
@@ -333,4 +340,3 @@ jobs:
           fi
       - run: |
           gh release upload ${{ needs.release.outputs.tag_name }} ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.${{ matrix.ext }}
-          
