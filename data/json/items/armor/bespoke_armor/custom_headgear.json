@@ -82,7 +82,7 @@
     "warmth": 15,
     "environmental_protection": 3,
     "techniques": [ "WBLOCK_1" ],
-    "flags": [ "VARSIZE", "RAINPROOF", "STURDY", "OUTER" ],
+    "flags": [ "VARSIZE", "RAINPROOF", "STURDY", "BELTED" ],
     "armor": [
       {
         "material": [
@@ -90,9 +90,9 @@
           { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
           { "type": "leather_treated", "covered_by_mat": 95, "thickness": 1.0 }
         ],
-        "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+        "covers": [ "head" ],
         "coverage": 95,
-        "encumbrance": [ 6, 6 ]
+        "encumbrance": [ 18, 18 ]
       }
     ]
   },
@@ -114,7 +114,7 @@
     "warmth": 20,
     "environmental_protection": 3,
     "techniques": [ "WBLOCK_1" ],
-    "flags": [ "VARSIZE", "RAINPROOF", "STURDY", "OUTER" ],
+    "flags": [ "VARSIZE", "RAINPROOF", "STURDY", "BELTED" ],
     "armor": [
       {
         "material": [
@@ -123,9 +123,9 @@
           { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
           { "type": "leather_treated", "covered_by_mat": 95, "thickness": 1.0 }
         ],
-        "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+        "covers": [ "head" ],
         "coverage": 95,
-        "encumbrance": [ 7, 7 ]
+        "encumbrance": [ 20, 20 ]
       }
     ]
   },
@@ -146,7 +146,7 @@
     "color": "light_gray",
     "warmth": 75,
     "environmental_protection": 5,
-    "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "OUTER" ],
+    "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "BELTED" ],
     "armor": [
       {
         "material": [
@@ -156,7 +156,7 @@
         ],
         "covers": [ "head" ],
         "coverage": 95,
-        "encumbrance": [ 9, 9 ]
+        "encumbrance": [ 22, 22 ]
       }
     ]
   },
