@@ -31,7 +31,12 @@
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r", "leg_upper_l", "leg_upper_r", "leg_knee_r", "leg_knee_l" ]
       },
-      { "coverage": 90, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_r", "leg_lower_l" ] }
+      {
+        "coverage": 90,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_r", "leg_lower_l" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -72,9 +77,14 @@
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "volume_encumber_modifier": 0.7
+        "encumbrance": [ 6, 10 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -156,7 +166,14 @@
     "color": "light_red",
     "material_thickness": 0.1,
     "flags": [ "VARSIZE", "WATER_FRIENDLY", "SKINTIGHT" ],
-    "armor": [ { "coverage": 75, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
+    "armor": [
+      {
+        "coverage": 75,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": 4
+      }
+    ]
   },
   {
     "id": "hot_pants_fur",
@@ -174,7 +191,14 @@
     "warmth": 10,
     "material_thickness": 1.5,
     "flags": [ "VARSIZE", "SKINTIGHT" ],
-    "armor": [ { "coverage": 75, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
+    "armor": [
+      {
+        "coverage": 75,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": 8
+      }
+    ]
   },
   {
     "id": "hot_pants_leather",
@@ -192,7 +216,14 @@
     "warmth": 5,
     "material_thickness": 0.5,
     "flags": [ "VARSIZE", "SKINTIGHT" ],
-    "armor": [ { "coverage": 75, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
+    "armor": [
+      {
+        "coverage": 75,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": 6
+      }
+    ]
   },
   {
     "id": "jeans",
@@ -244,17 +275,23 @@
     "flags": [ "VARSIZE", "POCKETS" ],
     "armor": [
       {
-        "encumbrance": [ 14, 16 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": [ 14, 16 ]
       },
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -274,36 +311,36 @@
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
-        "max_contains_volume": "750 ml",
-        "max_contains_weight": "2 kg",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "900 g",
         "max_item_length": "10 cm",
         "moves": 60
       },
       {
         "pocket_type": "CONTAINER",
-        "max_contains_volume": "750 ml",
-        "max_contains_weight": "2 kg",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "900 g",
         "max_item_length": "10 cm",
         "moves": 60
       },
       {
         "pocket_type": "CONTAINER",
-        "max_contains_volume": "680 ml",
-        "max_contains_weight": "2 kg",
+        "max_contains_volume": "600 ml",
+        "max_contains_weight": "1 kg",
         "max_item_length": "8 cm",
         "moves": 80
       },
       {
         "pocket_type": "CONTAINER",
-        "max_contains_volume": "680 ml",
-        "max_contains_weight": "2 kg",
+        "max_contains_volume": "600 ml",
+        "max_contains_weight": "1 kg",
         "max_item_length": "8 cm",
         "moves": 80
       }
     ],
     "warmth": 10,
     "material_thickness": 0.52,
-    "//": "Lightweight 8 oz denim jeans.",
+    "//": "Lightweight 8 oz stretch denim jeans.",
     "flags": [ "VARSIZE", "POCKETS" ],
     "armor": [
       {
@@ -346,8 +383,18 @@
     "material_thickness": 0.3,
     "flags": [ "VARSIZE" ],
     "armor": [
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] },
-      { "coverage": 95, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": [ 8, 10 ]
+      },
+      {
+        "coverage": 95,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -376,8 +423,18 @@
     "material_thickness": 1.5,
     "flags": [ "VARSIZE" ],
     "armor": [
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] },
-      { "coverage": 95, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": [ 12, 16 ]
+      },
+      {
+        "coverage": 95,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -393,17 +450,28 @@
     "symbol": "[",
     "looks_like": "pants_leather",
     "color": "dark_gray",
-    "warmth": 20,
+    "warmth": 8,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE", "SKINTIGHT", "WATER_FRIENDLY" ],
     "armor": [
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] },
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": 4
+      },
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": 0
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": 0
+      }
     ]
   },
   {
@@ -421,7 +489,14 @@
     "color": "brown",
     "material_thickness": 0.5,
     "flags": [ "VARSIZE", "SKINTIGHT", "OVERSIZE" ],
-    "armor": [ { "coverage": 25, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
+    "armor": [
+      {
+        "coverage": 25,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": 4
+      }
+    ]
   },
   {
     "id": "loincloth_fur",
@@ -439,7 +514,14 @@
     "warmth": 5,
     "material_thickness": 1.5,
     "flags": [ "VARSIZE", "SKINTIGHT", "OVERSIZE" ],
-    "armor": [ { "coverage": 25, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
+    "armor": [
+      {
+        "coverage": 25,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": 8
+      }
+    ]
   },
   {
     "id": "loincloth_leather",
@@ -456,7 +538,14 @@
     "color": "brown",
     "material_thickness": 1,
     "flags": [ "VARSIZE", "SKINTIGHT", "OVERSIZE" ],
-    "armor": [ { "coverage": 25, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
+    "armor": [
+      {
+        "coverage": 25,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": 6
+      }
+    ]
   },
   {
     "id": "loincloth_wool",
@@ -474,7 +563,14 @@
     "warmth": 5,
     "material_thickness": 1,
     "flags": [ "VARSIZE", "SKINTIGHT", "OVERSIZE" ],
-    "armor": [ { "coverage": 25, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
+    "armor": [
+      {
+        "coverage": 25,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": 6
+      }
+    ]
   },
   {
     "id": "nanoskirt",
@@ -522,15 +618,20 @@
         "encumbrance": [ 8, 8 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "volume_encumber_modifier": 0.6
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -550,22 +651,22 @@
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
-        "max_contains_volume": "1250 ml",
-        "max_contains_weight": "4 kg",
-        "max_item_length": "19 cm",
+        "max_contains_volume": "1000 ml",
+        "max_contains_weight": "1800 g",
+        "max_item_length": "16 cm",
         "moves": 80
       },
       {
         "pocket_type": "CONTAINER",
-        "max_contains_volume": "1250 ml",
-        "max_contains_weight": "4 kg",
-        "max_item_length": "19 cm",
+        "max_contains_volume": "1000 ml",
+        "max_contains_weight": "1800 g",
+        "max_item_length": "16 cm",
         "moves": 80
       },
       {
         "pocket_type": "CONTAINER",
         "max_contains_volume": "1080 ml",
-        "max_contains_weight": "4 kg",
+        "max_contains_weight": "2 kg",
         "max_item_length": "165 mm",
         "moves": 100
       },
@@ -580,7 +681,26 @@
     "warmth": 10,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE", "POCKETS" ],
-    "armor": [ { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "encumbrance": [ 8, 12 ] } ]
+    "armor": [
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "encumbrance": [ 10, 14 ]
+      },
+      {
+        "coverage": 100,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
+      },
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
+    ]
   },
   {
     "id": "pants_checkered",
@@ -665,18 +785,23 @@
     "flags": [ "VARSIZE", "POCKETS", "SOFT" ],
     "armor": [
       {
-        "encumbrance": [ 6, 10 ],
+        "encumbrance": [ 10, 18 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "volume_encumber_modifier": 0.6
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -741,18 +866,23 @@
     "flags": [ "VARSIZE", "POCKETS" ],
     "armor": [
       {
-        "encumbrance": [ 7, 11 ],
+        "encumbrance": [ 7, 12 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "volume_encumber_modifier": 0.6
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -813,9 +943,15 @@
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -870,9 +1006,15 @@
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -932,16 +1074,22 @@
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
     "id": "police_breeches",
     "type": "ARMOR",
     "name": { "str_sp": "police breeches" },
-    "description": "A pair of tight-fitting police breeches.  Offers lots of mobility for motorized officers.",
+    "description": "A pair of tight-fitting police breeches.  They offer plenty of mobility for motorized officers.",
     "weight": "560 g",
     "volume": "1500 ml",
     "price": "49 USD",
@@ -953,11 +1101,10 @@
     "color": "dark_gray",
     "armor": [
       {
-        "encumbrance": [ 5, 12 ],
+        "encumbrance": [ 10, 14 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "volume_encumber_modifier": 0.6
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
       {
         "coverage": 100,
@@ -1050,17 +1197,16 @@
     "flags": [ "VARSIZE" ],
     "armor": [
       {
-        "encumbrance": [ 2, 5 ],
+        "encumbrance": [ 2, 6 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "volume_encumber_modifier": 0.7
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
       {
         "coverage": 80,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
-        "volume_encumber_modifier": 0.0
+        "encumbrance": [ 0, 0 ]
       }
     ]
   },
@@ -1130,14 +1276,13 @@
         "encumbrance": [ 2, 12 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "volume_encumber_modifier": 0.7
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
       {
         "coverage": 90,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
-        "volume_encumber_modifier": 0.7
+        "encumbrance": [ 0, 0 ]
       }
     ]
   },
@@ -1180,14 +1325,13 @@
         "encumbrance": [ 3, 10 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "volume_encumber_modifier": 0.7
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
       {
         "coverage": 90,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
-        "volume_encumber_modifier": 0.0
+        "encumbrance": [ 0, 0 ]
       }
     ]
   },
@@ -1213,7 +1357,12 @@
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
-      { "coverage": 60, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+      {
+        "coverage": 60,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "encumbrance": 0
+      }
     ],
     "material_thickness": 0.65,
     "flags": [ "VARSIZE" ]
@@ -1242,7 +1391,12 @@
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
-      { "coverage": 75, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+      {
+        "coverage": 75,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "encumbrance": 0
+      }
     ]
   },
   {
@@ -1271,9 +1425,15 @@
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": 0
       },
-      { "coverage": 90, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 90,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": 0
+      }
     ]
   },
   {
@@ -1299,7 +1459,12 @@
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
-      { "coverage": 38, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+      {
+        "coverage": 38,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "encumbrance": 0
+      }
     ]
   },
   {
@@ -1325,7 +1490,12 @@
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
-      { "coverage": 38, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+      {
+        "coverage": 38,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "encumbrance": 0
+      }
     ]
   },
   {
@@ -1385,9 +1555,15 @@
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -1460,9 +1636,15 @@
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -1491,9 +1673,15 @@
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": 0
       },
-      { "coverage": 95, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 95,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": 0
+      }
     ]
   },
   {
@@ -1559,9 +1747,15 @@
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -1700,15 +1894,20 @@
         "encumbrance": [ 8, 22 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "volume_encumber_modifier": 0.6
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
       {
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ],
+        "encumbrance": [ 0, 0 ]
       },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+      {
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "encumbrance": [ 0, 0 ]
+      }
     ]
   },
   {
@@ -1734,7 +1933,12 @@
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       },
-      { "coverage": 38, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+      {
+        "coverage": 38,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "encumbrance": 0
+      }
     ]
   }
 ]
