@@ -1889,7 +1889,7 @@
     "name": { "str": "messenger bag" },
     "copy-from": "mbag",
     "sided": true,
-    "flags": [ "OUTER", "WATER_FRIENDLY", "OVERSIZE" ],
+    "flags": [ "BELTED", "WATER_FRIENDLY", "OVERSIZE" ],
     "armor": [
       {
         "encumbrance": 4,
