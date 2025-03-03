@@ -782,7 +782,7 @@ static void grab()
         const float weary_mult = you.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
         item weap =  null_item_reference();
         you.mod_moves( -100 - you.attack_speed( weap ) / weary_mult );
-        you.as_character()->burn_energy_arms( -250 );
+        you.as_character()->burn_energy_arms( -125 );
         if( creatures.creature_at( grabp )->is_monster() ) {
             monster *z = creatures.creature_at( grabp )->as_monster();
             // TODO: Force this to use unarmed skill for one-handed or multilimb grabs. Will need to
