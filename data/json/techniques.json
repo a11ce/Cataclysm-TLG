@@ -39,8 +39,7 @@
     "crit_ok": true,
     "fallback": true,
     "weighting": -20,
-    "condition": { "and": [
-    { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } } ] },
+    "condition": { "and": [ { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } } ] },
     "unarmed_allowed": true,
     "messages": [ "You kick %s!", "<npcname> kicks %s!" ],
     "description": "A basic kick",
