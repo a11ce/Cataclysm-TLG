@@ -1016,8 +1016,8 @@ aim_mods_cache Character::gen_aim_mods_cache( const item &gun )const
 }
 
 double Character::fastest_aiming_method_speed( const item &gun, double recoil,
-        const Target_attributes &target_attributes,
-        const std::optional<std::reference_wrapper<const parallax_cache>> parallax_cache ) const
+        const Target_attributes target_attributes,
+        const std::optional<std::reference_wrapper<parallax_cache>> parallax_cache ) const
 {
     // Get fastest aiming method that can be used to improve aim further below @ref recoil.
 
