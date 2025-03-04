@@ -769,7 +769,7 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "riot guard" },
-    "description": "A hard chest protector attached to thigh and upper arm guards.  MOLLE webbing is attached to the torso and the word POLICE is emblazoned across the front.",
+    "description": "Padded plastic armor for the hips, torso, and shoulders.  If it were combined with some arm and shin guards, it'd be a full set of riot armor.  It sports MOLLE webbing for accessory attachments, and the word POLICE is painted across the front.",
     "weight": "2 kg",
     "volume": "10000 ml",
     "price": "400 USD",
@@ -785,7 +785,7 @@
     "use_action": [ { "type": "attach_molle", "size": 6 }, { "type": "detach_molle" } ],
     "armor": [
       {
-        "encumbrance": 6,
+        "encumbrance": 14,
         "coverage": 75,
         "covers": [ "torso" ],
         "volume_encumber_modifier": 0.3,
@@ -798,7 +798,7 @@
       {
         "covers": [ "arm_l", "arm_r", "leg_l", "leg_r" ],
         "volume_encumber_modifier": 0,
-        "encumbrance": 2,
+        "encumbrance": 4,
         "coverage": 65,
         "material": [
           { "type": "thermo_resin", "covered_by_mat": 90, "thickness": 1.5 },
