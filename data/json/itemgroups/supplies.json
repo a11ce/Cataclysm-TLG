@@ -235,7 +235,8 @@
       { "group": "ammo_pocket_batteries_full", "prob": 50 },
       [ "pilot_light", 50 ],
       { "item": "duct_tape", "prob": 200, "charges": [ 50, 200 ] },
-      [ "rubber_spray_can", 20 ],
+      { "group": "rubber_sealant_spray", "prob": 10 },
+      { "group": "rubber_sealant_spray_used", "prob": 10 },
       [ "superglue", 100 ],
       [ "string_6", 100 ],
       [ "string_36", 100 ],
@@ -265,7 +266,7 @@
       { "item": "solder_wire", "prob": 50, "count": [ 2, 6 ] },
       { "item": "pilot_light", "prob": 50, "count": [ 1, 2 ] },
       { "item": "metal_tank_little", "prob": 50, "count": [ 1, 2 ] },
-      [ "rubber_spray_can", 20 ],
+      { "group": "rubber_sealant_spray", "prob": 20 },
       [ "metal_tank", 10 ],
       [ "jerrycan", 10 ],
       [ "rubber_cement", 50 ],
@@ -433,7 +434,7 @@
       { "item": "chem_turpentine", "prob": 20, "charges": [ 20, -1 ] },
       { "item": "silicone", "prob": 15, "charges": [ 29, -1 ], "container-item": "squeeze_tube", "sealed": true },
       { "item": "silicone", "prob": 35, "charges": [ 8, -1 ], "container-item": "squeeze_tube_small", "sealed": true },
-      [ "rubber_spray_can", 20 ]
+      { "group": "rubber_sealant_spray", "prob": 20 }
     ]
   },
   {
@@ -640,7 +641,7 @@
       { "item": "seatbelt", "prob": 10, "count": [ 3, 10 ] },
       { "item": "five-point_harness", "prob": 3, "count": [ 2, 4 ] },
       { "item": "rubber_cement", "prob": 15, "count": [ 3, 9 ] },
-      { "item": "rubber_spray_can", "prob": 3 },
+      { "group": "rubber_sealant_spray_used", "prob": 5 },
       [ "vac_mold", 1 ],
       [ "wheel_wide", 10 ],
       [ "wheel_bicycle", 10 ],
@@ -955,5 +956,17 @@
     "type": "item_group",
     "subtype": "distribution",
     "entries": [ { "item": "hair_dye_kit", "prob": 100 }, { "group": "hair_dye", "prob": 90 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "rubber_sealant_spray",
+    "subtype": "collection",
+    "entries": [ { "item": "liquid_rubber_spray", "container-item": "rubber_spray_can", "charges": 10 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "rubber_sealant_spray_used",
+    "subtype": "collection",
+    "entries": [ { "item": "liquid_rubber_spray", "container-item": "rubber_spray_can", "charges": [ 0, 10 ] } ]
   }
 ]
