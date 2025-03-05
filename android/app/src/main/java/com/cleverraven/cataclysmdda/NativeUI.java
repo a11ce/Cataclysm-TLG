@@ -1,4 +1,4 @@
-package com.cleverraven.cataclysmdda;
+package com.cataclysmtlg.cataclysmtlg;
 
 import java.util.concurrent.Semaphore;
 
@@ -11,9 +11,9 @@ public class NativeUI {
         NO
     }
 
-    private CataclysmDDA activity;
+    private CataclysmTLG activity;
 
-    NativeUI(CataclysmDDA activity) {
+    NativeUI(CataclysmTLG activity) {
         this.activity = activity;
     }
 

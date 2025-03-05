@@ -1,4 +1,4 @@
-package com.cleverraven.cataclysmdda;
+package com.cataclysmtlg.cataclysmtlg;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -28,7 +28,7 @@ import android.os.*;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.cleverraven.cataclysmdda.CataclysmDDA_Helpers;
+import com.cataclysmtlg.CataclysmTLG_Helpers;
 
 public class SplashScreen extends Activity {
     private static final String TAG = "Splash";
@@ -113,7 +113,7 @@ public class SplashScreen extends Activity {
         super.onResume();
 
         Context context = getApplicationContext();
-        String service_names = CataclysmDDA_Helpers.getEnabledAccessibilityServiceNames(context);
+        String service_names = CataclysmTLG_Helpers.getEnabledAccessibilityServiceNames(context);
         accessibilityServicesAlert.setMessage( String.format( getString(R.string.accessibilityServicesMessage), service_names ) );
         if (!service_names.isEmpty()) {
             accessibilityServicesAlert.show();
@@ -201,7 +201,7 @@ public class SplashScreen extends Activity {
     private final class StartGameRunnable implements Runnable {
         @Override
         public void run() {
-            Intent intent = new Intent(SplashScreen.this, CataclysmDDA.class);
+            Intent intent = new Intent(SplashScreen.this, CataclysmTLG.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
             finish();
