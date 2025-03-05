@@ -2399,6 +2399,16 @@ void Character::process_turn()
     clear_miss_reasons();
     migrate_items_to_storage( false );
 
+    if( grab_1.victim == nullptr || grab_1.victim->is_dead_state() ) {
+        for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+            const efftype_id effid = eff.get_id();
+            add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
+                           disp_name() );
+            remove_effect( effid );
+        }
+        grab_1.clear();
+    }
+
     for( bionic &i : *my_bionics ) {
         if( i.incapacitated_time > 0_turns ) {
             i.incapacitated_time -= 1_turns;
@@ -2544,16 +2554,6 @@ void Character::process_turn()
             }
             it++;
         }
-    }
-
-    if( grab_1.victim == nullptr || grab_1.victim->is_dead_state() ) {
-        for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
-            const efftype_id effid = eff.get_id();
-            add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
-                           disp_name() );
-            remove_effect( effid );
-        }
-        grab_1.clear();
     }
 
     // Persist grabs as long as our target is adjacent.
