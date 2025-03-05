@@ -27,7 +27,7 @@
     "crit_ok": true,
     "unarmed_allowed": true,
     "fallback": true,
-    "weighting": -18,
+    "weighting": -16,
     "messages": [ "You punch %s!", "<npcname> punches %s!" ],
     "description": "A basic punch",
     "attack_vectors": [ "vector_punch" ]
@@ -39,7 +39,7 @@
     "crit_ok": true,
     "fallback": true,
     "weighting": -20,
-    "condition": { "and": [ { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } } ] },
+    "condition": { "not": { "u_has_flag": "GRAB_FILTER" } },
     "unarmed_allowed": true,
     "messages": [ "You kick %s!", "<npcname> kicks %s!" ],
     "description": "A basic kick",
