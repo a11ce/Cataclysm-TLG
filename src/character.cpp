@@ -2546,7 +2546,18 @@ void Character::process_turn()
         }
     }
 
+    if( grab_1.victim == nullptr || grab_1.victim->is_dead_state() ) {
+        for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+            const efftype_id effid = eff.get_id();
+            add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
+                           disp_name() );
+            remove_effect( effid );
+        }
+        grab_1.clear();
+    }
+
     // Persist grabs as long as our target is adjacent.
+    // Question: Why don't we check monsters here?
     if( grab_1.victim != nullptr && !grab_1.victim->is_monster() ) {
         bool remove = false;
         if( square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
@@ -2563,7 +2574,7 @@ void Character::process_turn()
                 if( eff.get_intensity() == grab_1.grab_strength ) {
                     grab_1.victim->remove_effect( effid );
                     // For now, GRAB_FILTER is only for a character's grab_1, so we can just remove it.
-                    // This may need to be revisitied when multigrabs are added.
+                    // This may need to be revisited when multigrabs are added.
                     for( const effect &youeff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                         const efftype_id youeffid = youeff.get_id();
                         remove_effect( youeffid );
@@ -2574,14 +2585,15 @@ void Character::process_turn()
             }
         }
     }
+
     // Check the grabbing character for orphan grabs on their end.
     if( has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
         bool remove = false;
-        if( grab_1.victim == nullptr ) {
+
+        if( grab_1.victim == nullptr || grab_1.victim->is_dead_state() ) {
             remove = true;
-        }
-        // This is for if we moved away, dropping our grab, but the victim moved adjacent to us before our next turn began.
-        if( grab_1.victim ) {
+        } else {
+            // This is for if we moved away, dropping our grab, but the victim moved adjacent before our next turn.
             if( square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
                 remove = true;
             }
@@ -2595,10 +2607,12 @@ void Character::process_turn()
                 remove = true;
             }
         }
+
         if( get_stamina() < 400 ) {
             add_msg_if_player( _( "You're too exhausted to maintain your hold." ) );
             remove = true;
         }
+
         if( remove ) {
             for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
@@ -2610,7 +2624,7 @@ void Character::process_turn()
         } else {
             // TODO: Move stamina cost to creature escape attempts, incorporate relative size etc.
             set_activity_level( EXPLOSIVE_EXERCISE );
-            burn_energy_arms( -260 );
+            burn_energy_arms( -200 );
         }
     }
     effect_on_conditions::process_effect_on_conditions( *this );

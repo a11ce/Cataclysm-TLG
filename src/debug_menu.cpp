@@ -895,7 +895,7 @@ static std::optional<debug_menu_index> debug_menu_uilist( bool display_all_entri
     }
 
     std::string msg;
-        msg = _( "Debug Functions" );
+    msg = _( "Debug Functions" );
 
     while( true ) {
         const int group = uilist( msg, menu );

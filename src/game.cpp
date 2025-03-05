@@ -10756,8 +10756,10 @@ bool game::walk_move( const tripoint &dest_loc, const bool via_ramp, const bool 
         }
     }
     // Try and fail to drag someone with us.
-    if( u.grab_1.victim.get() && !u.grapple_drag( u.grab_1.victim.get() ) ) {
-        return false;
+    if( u.grab_1.victim != nullptr ) {
+        if( u.grab_1.victim.get() && !u.grapple_drag( u.grab_1.victim.get() ) ) {
+            return false;
+        }
     }
     // Max out recoil & reset aim point
     u.recoil = MAX_RECOIL;

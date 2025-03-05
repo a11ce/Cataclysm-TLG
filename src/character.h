@@ -1172,6 +1172,7 @@ class Character : public Creature, public visitable
         // Filter techniques per tech, return a tech/vector/sublimb set
         std::optional<std::tuple<matec_id, attack_vector_id, sub_bodypart_str_id>>
                 evaluate_technique( const matec_id &tec_id, Creature &t, const item_location &weap,
+                                    std::vector<std::tuple<matec_id, attack_vector_id, sub_bodypart_str_id>> &fallbacks,
                                     bool crit = false, bool dodge_counter = false, bool block_counter = false );
         void perform_technique( const ma_technique &technique, Creature &t, damage_instance &di,
                                 int &move_cost, item_location &cur_weapon );
