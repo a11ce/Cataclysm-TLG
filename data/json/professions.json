@@ -492,7 +492,7 @@
   {
     "type": "profession_item_substitutions",
     "item": "mask_ski",
-    "sub": [ { "present": [ "WOOLALLERGY", "VEGAN" ], "new": [ "balclava" ] } ]
+    "sub": [ { "present": [ "WOOLALLERGY", "VEGAN" ], "new": [ "balaclava" ] } ]
   },
   {
     "type": "profession_item_substitutions",
@@ -502,7 +502,7 @@
   {
     "type": "profession_item_substitutions",
     "trait": "VEGAN",
-    "sub": [ { "item": "dress_shoes", "new": [ "espadrilles" ] } ]
+    "sub": [ { "item": "dress_shoes", "new": [ "shoes_slip_on" ] } ]
   },
   {
     "type": "profession_item_substitutions",
