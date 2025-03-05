@@ -374,8 +374,10 @@
     "material_thickness": 0.3,
     "flags": [ "VARSIZE" ],
     "armor": [
-      { "coverage": 100, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] },
-      { "coverage": 95, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+      "encumbrance": 3 },
+      { "coverage": 95, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+      "encumbrance": 0 }
     ]
   },
   {
@@ -401,14 +403,14 @@
       }
     ],
     "warmth": 20,
-    "material_thickness": 0.3,
+    "material_thickness": 0.5,
     "flags": [ "VARSIZE" ],
     "armor": [
       {
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "encumbrance": [ 8, 10 ]
+        "encumbrance": [ 4, 8 ]
       },
       {
         "coverage": 95,
@@ -448,7 +450,7 @@
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "encumbrance": [ 12, 16 ]
+        "encumbrance": [ 6, 10 ]
       },
       {
         "coverage": 95,
@@ -1438,7 +1440,7 @@
     "flags": [ "VARSIZE" ],
     "armor": [
       {
-        "encumbrance": 4,
+        "encumbrance": 6,
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
