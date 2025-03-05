@@ -246,7 +246,7 @@ preBuild.dependsOn createWindowsJunctionLinks
 createWindowsJunctionLinks.dependsOn makeLocalization
 
 android {
-    namespace "com.cleverraven.cataclysmdda"
+    namespace "com.cataclysmtlg.cataclysmtlg"
     compileSdkVersion override_compileSdkVersion
     ndkVersion override_ndkVersion
 
@@ -256,10 +256,10 @@ android {
         versionCode Integer.valueOf(override_versionCode)
         versionName new File("$version_header_path").text.split('\"')[1]
         if (buildAsApplication) {
-            applicationId "com.cleverraven.cataclysmdda"
-            setProperty("archivesBaseName", "cataclysmdda-" + versionName)
+            applicationId "com.cataclysmtlg.cataclysmtlg"
+            setProperty("archivesBaseName", "cataclysmtlg-" + versionName)
         }
-        resValue "string", "app_name", "Cataclysm DDA"
+        resValue "string", "app_name", "Cataclysm TLG"
 
         splits {
             // Configures multiple APKs based on ABI.
@@ -299,12 +299,12 @@ android {
     productFlavors {
         stable {
             dimension "version"
-            resValue "string", "app_name", "Cataclysm DDA"
+            resValue "string", "app_name", "Cataclysm TLG"
         }
         experimental {
             dimension "version"
             applicationIdSuffix ".experimental"
-            resValue "string", "app_name", "Cataclysm DDA (experimental)"
+            resValue "string", "app_name", "Cataclysm TLG"
         }
     }
 
