@@ -1,4 +1,4 @@
-package com.cleverraven.cataclysmdda;
+package com.cleverraven.cataclysmtlg;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import android.accessibilityservice.AccessibilityServiceInfo;
 import android.content.pm.ServiceInfo;
 import android.widget.Toast;
 
-public class CataclysmDDA_Helpers {
+public class CataclysmTLG_Helpers {
     public static List<AccessibilityServiceInfo> getEnabledAccessibilityServiceInfo(Context context) {
         AccessibilityManager am = (AccessibilityManager) context.getSystemService(Context.ACCESSIBILITY_SERVICE);
         List<AccessibilityServiceInfo> enabledServicesInfo = am.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_ALL_MASK);

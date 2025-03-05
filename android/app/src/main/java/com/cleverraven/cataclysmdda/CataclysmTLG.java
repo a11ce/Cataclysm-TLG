@@ -1,4 +1,4 @@
-package com.cleverraven.cataclysmdda;
+package com.cataclysmtlg.cataclysmtlg;
 
 import org.libsdl.app.SDLActivity;
 
@@ -10,10 +10,10 @@ import android.view.View;
 import android.widget.Toast;
 import android.content.res.Configuration;
 
-public class CataclysmDDA extends SDLActivity {
-    private static final String TAG = "CDDA";
+public class CataclysmTLG extends SDLActivity {
+    private static final String TAG = "CTLG";
 
-    private NativeUI nativeUI = new NativeUI(CataclysmDDA.this);
+    private NativeUI nativeUI = new NativeUI(CataclysmTLG.this);
 
     public void vibrate(int duration) {
         try {
