@@ -222,7 +222,8 @@ class ma_technique
 
         bool miss_recovery = false; // reduces the total move cost of a miss by 50%, post stumble modifier
         bool grab_break = false;    // allows grab_breaks, like tec_break
-        bool fallback = false;    // if vector and conditions are valid, tech will be used if no others are available regardless of weighting
+        bool fallback =
+            false;    // if vector and conditions are valid, tech will be used if no others are available regardless of weighting
 
         int weighting = 0; //how often this technique is used
 

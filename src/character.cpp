@@ -2586,47 +2586,47 @@ void Character::process_turn()
         }
     }
 
-// Check the grabbing character for orphan grabs on their end.
-if( has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
-    bool remove = false;
-    
-    if( grab_1.victim == nullptr || grab_1.victim->is_dead_state() ) {
-        remove = true;
-    } else {
-        // This is for if we moved away, dropping our grab, but the victim moved adjacent before our next turn.
-        if( square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
+    // Check the grabbing character for orphan grabs on their end.
+    if( has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
+        bool remove = false;
+
+        if( grab_1.victim == nullptr || grab_1.victim->is_dead_state() ) {
             remove = true;
-        }
-        bool grabfound = false;
-        for( const effect &eff : grab_1.victim->get_effects_with_flag( json_flag_GRAB ) ) {
-            if( eff.get_intensity() == grab_1.grab_strength ) {
-                grabfound = true;
+        } else {
+            // This is for if we moved away, dropping our grab, but the victim moved adjacent before our next turn.
+            if( square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
+                remove = true;
+            }
+            bool grabfound = false;
+            for( const effect &eff : grab_1.victim->get_effects_with_flag( json_flag_GRAB ) ) {
+                if( eff.get_intensity() == grab_1.grab_strength ) {
+                    grabfound = true;
+                }
+            }
+            if( !grabfound ) {
+                remove = true;
             }
         }
-        if( !grabfound ) {
+
+        if( get_stamina() < 400 ) {
+            add_msg_if_player( _( "You're too exhausted to maintain your hold." ) );
             remove = true;
         }
-    }
 
-    if( get_stamina() < 400 ) {
-        add_msg_if_player( _( "You're too exhausted to maintain your hold." ) );
-        remove = true;
-    }
-
-    if( remove ) {
-        for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
-            const efftype_id effid = eff.get_id();
-            add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
-                           disp_name() );
-            remove_effect( effid );
+        if( remove ) {
+            for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+                const efftype_id effid = eff.get_id();
+                add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
+                               disp_name() );
+                remove_effect( effid );
+            }
+            grab_1.clear();
+        } else {
+            // TODO: Move stamina cost to creature escape attempts, incorporate relative size etc.
+            set_activity_level( EXPLOSIVE_EXERCISE );
+            burn_energy_arms( -200 );
         }
-        grab_1.clear();
-    } else {
-        // TODO: Move stamina cost to creature escape attempts, incorporate relative size etc.
-        set_activity_level( EXPLOSIVE_EXERCISE );
-        burn_energy_arms( -200 );
     }
-}
     effect_on_conditions::process_effect_on_conditions( *this );
 }
 

@@ -1451,18 +1451,18 @@ std::tuple<matec_id, attack_vector_id, sub_bodypart_str_id> Character::pick_tech
 
     if( possible.empty() && !fallbacks.empty() ) {
         return random_entry( fallbacks,
-            std::make_tuple( tec_none, attack_vector_vector_null,
-                             sub_body_part_sub_limb_debug ) );
+                             std::make_tuple( tec_none, attack_vector_vector_null,
+                                              sub_body_part_sub_limb_debug ) );
     } else {
-    return random_entry( possible,
-                         std::make_tuple( tec_none, attack_vector_vector_null,
-                                          sub_body_part_sub_limb_debug ) );
+        return random_entry( possible,
+                             std::make_tuple( tec_none, attack_vector_vector_null,
+                                              sub_body_part_sub_limb_debug ) );
     }
 }
 std::optional<std::tuple<matec_id, attack_vector_id, sub_bodypart_str_id>>
-Character::evaluate_technique( const matec_id &tec_id, Creature &t, const item_location &weap,
-        std::vector<std::tuple<matec_id, attack_vector_id, sub_bodypart_str_id>> &fallbacks,
-        bool crit, bool dodge_counter, bool block_counter )
+        Character::evaluate_technique( const matec_id &tec_id, Creature &t, const item_location &weap,
+                                       std::vector<std::tuple<matec_id, attack_vector_id, sub_bodypart_str_id>> &fallbacks,
+                                       bool crit, bool dodge_counter, bool block_counter )
 {
     // this could be more robust but for now it should work fine
     bool is_loaded = weap && weap->is_magazine_full();
@@ -1573,12 +1573,12 @@ Character::evaluate_technique( const matec_id &tec_id, Creature &t, const item_l
     // If we have negative weighting then roll to see if it's valid this time
     if( tec_id->weighting < 0 && !one_in( std::abs( tec_id->weighting ) ) ) {
         if( !tec_id->fallback ) {
-        add_msg_debug( debugmode::DF_MELEE,
-                       "Negative technique weighting failed weight roll, attack discarded" );
+            add_msg_debug( debugmode::DF_MELEE,
+                           "Negative technique weighting failed weight roll, attack discarded" );
         } else {
             // Fallback techs should always fire in place of tec_none if possible, even if they failed their roll.
             if( tec_id->is_valid_character( *this ) ) {
-            // We still need a valid vector to make a fallback attack.
+                // We still need a valid vector to make a fallback attack.
                 std::optional<std::pair<attack_vector_id, sub_bodypart_str_id>> vector;
                 vector = martial_arts_data->choose_attack_vector( *this, tec_id );
                 if( vector ) {
@@ -1604,7 +1604,7 @@ Character::evaluate_technique( const matec_id &tec_id, Creature &t, const item_l
             return std::nullopt;
         }
     }
- 
+
     return std::nullopt;
 }
 
