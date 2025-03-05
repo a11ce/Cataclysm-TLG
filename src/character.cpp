@@ -2546,14 +2546,20 @@ void Character::process_turn()
         }
     }
 
-// Persist grabs as long as our target is adjacent.
-if( grab_1.victim != nullptr && !grab_1.victim->is_monster() ) {
-    bool remove = false;
-    
-    // If the victim is dead or null, remove the grab
     if( grab_1.victim == nullptr || grab_1.victim->is_dead_state() ) {
+        for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+            const efftype_id effid = eff.get_id();
+            add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
+                           disp_name() );
+            remove_effect( effid );
+        }
         grab_1.clear();
-    } else {
+    }
+
+    // Persist grabs as long as our target is adjacent.
+    // Question: Why don't we check monsters here?
+    if( grab_1.victim != nullptr && !grab_1.victim->is_monster() ) {
+        bool remove = false;
         if( square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
             remove = true;
         }
@@ -2579,7 +2585,6 @@ if( grab_1.victim != nullptr && !grab_1.victim->is_monster() ) {
             }
         }
     }
-}
 
 // Check the grabbing character for orphan grabs on their end.
 if( has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
