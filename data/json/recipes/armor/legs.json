@@ -346,6 +346,19 @@
     "using": [ [ "tailoring_felt_patchwork", 20 ], [ "strap_small", 1 ], [ "clasps", 1 ] ]
   },
   {
+    "result": "kilt_utility",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_LEGS",
+    "skill_used": "tailor",
+    "difficulty": 4,
+    "time": "6 h",
+    "book_learn": [ [ "scots_tailor", 4 ], [ "scots_cookbook", 7 ] ],
+    "proficiencies": [ { "proficiency": "prof_closures" } ],
+    "using": [ [ "tailoring_canvas_patchwork", 7 ], [ "strap_small", 1 ], [ "clasps", 1 ] ]
+  },
+  {
     "result": "knee_pads",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
