@@ -1044,7 +1044,7 @@ void uilist::query( bool loop, int timeout, bool allow_unfiltered_hotkeys )
         jobject activity = ( jobject )SDL_AndroidGetActivity();
         jclass clazz( env->GetObjectClass( activity ) );
         jmethodID get_nativeui_method_id = env->GetMethodID( clazz, "getNativeUI",
-                                           "()Lcom/cleverraven/cataclysmdda/NativeUI;" );
+                                           "()Lcom/cataclysmtlg/cataclysmtlg/NativeUI;" );
         jobject native_ui_obj = env->CallObjectMethod( activity, get_nativeui_method_id );
         jclass native_ui_cls( env->GetObjectClass( native_ui_obj ) );
         jmethodID list_menu_method_id = env->GetMethodID( native_ui_cls, "singleChoiceList",
