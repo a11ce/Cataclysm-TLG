@@ -816,7 +816,7 @@ bool query_yn( const std::string &text )
         jobject activity = ( jobject )SDL_AndroidGetActivity();
         jclass clazz( env->GetObjectClass( activity ) );
         jmethodID get_nativeui_method_id = env->GetMethodID( clazz, "getNativeUI",
-                                           "()Lcom/cleverraven/cataclysmdda/NativeUI;" );
+                                           "()Lcom/cataclysmtlg/cataclysmtlg/NativeUI;" );
         jobject native_ui_obj = env->CallObjectMethod( activity, get_nativeui_method_id );
         jclass native_ui_cls( env->GetObjectClass( native_ui_obj ) );
         jmethodID queryYN_method_id = env->GetMethodID( native_ui_cls, "queryYN", "(Ljava/lang/String;)Z" );
@@ -917,7 +917,7 @@ int popup( const std::string &text, PopupFlags flags )
         jobject activity = ( jobject )SDL_AndroidGetActivity();
         jclass clazz( env->GetObjectClass( activity ) );
         jmethodID get_nativeui_method_id = env->GetMethodID( clazz, "getNativeUI",
-                                           "()Lcom/cleverraven/cataclysmdda/NativeUI;" );
+                                           "()Lcom/cataclysmtlg/cataclysmtlg/NativeUI;" );
         jobject native_ui_obj = env->CallObjectMethod( activity, get_nativeui_method_id );
         jclass native_ui_cls( env->GetObjectClass( native_ui_obj ) );
         jmethodID queryYN_method_id = env->GetMethodID( native_ui_cls, "popup", "(Ljava/lang/String;)V" );
