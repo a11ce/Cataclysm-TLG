@@ -1,4 +1,4 @@
-package com.cleverraven.cataclysmtlg;
+package com.cataclysmtlg.cataclysmtlg;
 
 import java.util.List;
 
