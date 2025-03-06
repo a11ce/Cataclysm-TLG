@@ -12,9 +12,9 @@ TLG's primary aim is to preserve Cataclysm's depth and respect for plausibility 
 
 ## Links
 
-Website: https://cataclysmtlg.com/
+Website: cataclysmtlg.com
 
-Discord: https://discord.gg/n49PTZyMkB
+Discord: https://discord.com/invite/r5w9ktfj
 
 ## Contributions
 
