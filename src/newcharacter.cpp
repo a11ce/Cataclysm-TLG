@@ -1325,6 +1325,7 @@ static std::string assemble_stat_details( avatar &u, const unsigned char sel )
                     _( "\n- Speed of 'catching up' practical experience to theoretical knowledge"
                        "\n- Sight distance on game map and overmap"
                        "\n- Effectiveness of stealing"
+                       "\n- Ranged attack precision"
                        "\n- Throwing accuracy"
                        "\n- Disinfecting your own wounds and using first aid on others"
                        "\n- Chance of losing control of vehicle when driving"
