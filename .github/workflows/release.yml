@@ -325,8 +325,8 @@ jobs:
           # Uncomment and configure these if you're using keystore properties files
           echo "${{ secrets.KEYSTORE }}" > ctlg-release-key.jks.asc
           gpg -d --passphrase "${{ secrets.KEYSTORE_PASSWORD }}" --batch ctlg-release-key.jks.asc > app/release.keystore 
-          # echo "${{ secrets.KEYSTORE_PROPERTIES }}" > keystore.properties.asc   
-          # gpg -d --passphrase "${{ secrets.KEYSTORE_PASSWORD }}" --batch keystore.properties.asc > keystore.properties
+          echo "${{ secrets.KEYSTORE_PROPERTIES }}" > keystore.properties.asc   
+          gpg -d --passphrase "${{ secrets.KEYSTORE_PASSWORD }}" --batch keystore.properties.asc > keystore.properties
           
           export UPSTREAM_BUILD_NUMBER="$((11581 + ${{ github.run_number }}))"
           chmod +x gradlew
